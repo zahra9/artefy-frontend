@@ -43,11 +43,7 @@ const WelcomeRemaster: React.FC = () => {
             {/* <button onClick={() => history.push('/drop/remastered')}>
               Visit ReMastered
             </button> */}
-            {/* <img className={styles.comingSoon} src={comingSoon} /> */}
-
-            <button onClick={() => history.push('/drop/remastered')}>
-              Buy Remastered
-            </button>
+            <img className={styles.comingSoon} src={comingSoon} />
           </div>
         </Container>
       </div>

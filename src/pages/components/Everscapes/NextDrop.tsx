@@ -127,7 +127,7 @@ const DesktopItemContainer: React.FC<{
         <div className={styles.DesktopItemMain} key={3}>
           <DesktopItem
             image={[valentineDrop]}
-            dropStatus="Drop Ended"
+            dropStatus="Drop Live"
             dropName="VALENTINE"
             artistCount={1}
             collectionsCount="1"
@@ -142,7 +142,7 @@ const DesktopItemContainer: React.FC<{
           <div className={styles.verticalLine2} />
           <DesktopItem
             image={[exploringDrop]}
-            dropStatus="Drop Ended"
+            dropStatus="Drop Live"
             dropName="EXPLORING FANTASY"
             artistCount={4}
             collectionsCount="2"

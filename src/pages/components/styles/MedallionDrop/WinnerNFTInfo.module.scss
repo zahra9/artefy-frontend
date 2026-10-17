@@ -29,6 +29,7 @@
 	.walletAddress{
 		max-height: 300px;
 		overflow-y: auto;
+		overflow-x:clip;
 		&::-webkit-scrollbar {
 			width: 2px;
 		}
@@ -48,10 +49,8 @@
 			padding: 0;
 			li{
 				color: #ffffff;
-				font-family: 'Gotham Light';
 				font-size: 14px;
 				font-weight: 400;
-				word-break: break-all;
 			}
 		}
 	}
@@ -60,9 +59,5 @@
 	align-items: center;
 	.winnerNftName{
 		margin-bottom: 20px;
-		font-size: 30px;
-	}
-	.walletName{
-		font-size: 30px;
 	}
 }

@@ -26,11 +26,11 @@ const MenuItems: MenuItem[] = [
         displayName: 'Exploring Fantasy drop',
         href: '/drop/exploring-fantasy',
       },
-      // { displayName: 'Infinite Worlds Drop', href: '/drop/infinite-worlds' },
-      // {
-      //   displayName: 'Larry Elmore Drop',
-      //   href: '/drop/larry-elmore',
-      // },
+      { displayName: 'Infinite Worlds Drop', href: '/drop/infinite-worlds' },
+      {
+        displayName: 'Larry Elmore Drop',
+        href: '/drop/larry-elmore',
+      },
     ],
   },
   // { displayName: 'ReMastered', href: '/drop/remastered' },

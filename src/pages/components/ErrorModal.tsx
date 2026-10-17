@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Modal, Typography, Box, Button } from '@material-ui/core';
 import { SentimentVeryDissatisfied } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { ErrorStateActions } from 'redux/slices/ErrorState';
-import { useHistory } from 'react-router-dom';
 import { cross } from '../../assets';
 import styles from './styles/Auth/ErrorModal.module.scss';
 import PopupGIF from '../../assets/images/Enable_popup.gif';
@@ -41,42 +40,17 @@ const ErrorModal: React.FC<any> = () => {
   const isPopupError = errorMessage?.includes('popup') || false;
   const description = isPopupError ? POPUP_BLOCKED_MESSAGE : false;
   const dispatch = useAppDispatch();
-  const history = useHistory();
 
   const onModalClose = () => {
     dispatch(ErrorStateActions.setErrorModal(false));
     dispatch(ErrorStateActions.setErrorMessage(''));
     actionOnButtonClick && actionOnButtonClick();
     dispatch(ErrorStateActions.setActionOnButtonClick(() => {}));
-    if (errorMessage === 'This Username is already in use username') {
-      if (history.location.hash === '#register') {
-        dispatch(ErrorStateActions.setErrorModal(false));
-        dispatch(ErrorStateActions.setErrorMessage(''));
-        history.push('/auth#login');
-      } else {
-        dispatch(ErrorStateActions.setErrorModal(false));
-        dispatch(ErrorStateActions.setErrorMessage(''));
-        history.push('/auth#login');
-        window.location.reload();
-      }
-    }
   };
 
   const onModalCloseCrossButton = () => {
     dispatch(ErrorStateActions.setErrorModal(false));
     dispatch(ErrorStateActions.setErrorMessage(''));
-    if (errorMessage === 'This Username is already in use username') {
-      if (history.location.hash === '#register') {
-        dispatch(ErrorStateActions.setErrorModal(false));
-        dispatch(ErrorStateActions.setErrorMessage(''));
-        history.push('/auth#login');
-      } else {
-        dispatch(ErrorStateActions.setErrorModal(false));
-        dispatch(ErrorStateActions.setErrorMessage(''));
-        history.push('/auth#login');
-        window.location.reload();
-      }
-    }
   };
 
   return (
